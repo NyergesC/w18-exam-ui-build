@@ -32,12 +32,18 @@
   }
 
   body{
+      display: flex;
+      justify-content: center;
+      margin-top: 60px; 
+      padding: 0 20px;
       background-color: #ffeedf;
       font-family: 'Space Grotesk', sans-serif;
   }
 
   .header{
       position: fixed;
+      top: 0;
+      left: 0;
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -45,18 +51,103 @@
       background-color: #ffeedf;
       color: #145434;
       border-bottom: 1px solid #145434;
-      font-family: Space;
-
   }
 
   h1{
       font-size: 36px;
+      padding: 5px 5px;
 
   }
 
-  button{
-      
-  }
+ #container{  
+    max-width: 1200px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 40px;
+    gap: 60px;
+    color: #ffeedf;
+    padding-top: 40px;
+    
+    
+ }
+
+ .wrapper  {
+  width: 450px;
+  max-width: 450px;
+  height: 300px;
+/*   max-width: 1200px; */
+  position: relative;
+  background-color: #145434;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+ #numberContainer {
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  border: #145434 3px solid;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 24px;
+  color: #145434;
+  background-color: #ffeedf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  font-weight: 400;
+  padding-bottom: 60px;
+}
+
+.wrapper h2 {
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 10px;
+  border-top: #ffeedf 2px solid;
+}
+
+.wrapper h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.wrapper button {
+  width: 200px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  left: 260px;
+  top: 260px;
+  border: #145434 3px solid;
+  color: #145434;
+  background-color: #ffeedf;
+}
+
+.wrapper button i {
+  position: absolute;
+  padding-left: 50px;
+  font-size: 40px;
+  top: 2px;
+  right: 5px;
+}
+
+.wrapper button:hover {
+  background-color: #145434;
+  color: #ffeedf;
+  border: #ffeedf 3px solid;
+  transition: 0.3s ease-in-out;
+}
 
 
 

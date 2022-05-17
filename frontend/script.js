@@ -9,14 +9,31 @@ const header = () => {
 
 }
 
-const cardComponent = () => {
+const cardComponent = ({title, sub, text}) => {
+  /*  const cardArr = beers.cards */   
+    return  `
+        <div class="wrapper">
+            <div id="numberContainer">
+                <p id="id">1</p>
+            </div>
+            <h1>${title}</h1>
+            <h2>${sub}</h2>
+            <h3>${text}</h3>
+            <button>details<i class="material-icons">arrow_forward</i></button>
 
-    
+        </div>
+
+    `
+ 
 }
 
 
 function loadEvent(){
-    document.getElementById('root').insertAdjacentHTML('beforeend', header())   
+    document.getElementById('root').insertAdjacentHTML('beforeend', header())
+    
+    const cardArr = beers.cards
+
+    document.getElementById('container').insertAdjacentHTML('beforeend', cardArr.map(beer => cardComponent(beer)))   
 
 
 
